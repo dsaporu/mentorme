@@ -1,6 +1,6 @@
 class MentorshipPairingsController < ApplicationController
   def index
-    @mentorship_pairings = MentorshipPairing.all
+    @mentorship_pairings = MentorshipPairing.page(params[:page]).per(10)
 
     render("mentorship_pairings/index.html.erb")
   end
