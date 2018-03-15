@@ -24,7 +24,7 @@
           Mentor
         </label>
 
-        <input type="text" id="mentor_id" name="mentor_id" placeholder="Mentor" class="form-control" value="<%= @mentorship_pairing.mentor_id %>">
+        <%= select_tag(:mentor_id, options_from_collection_for_select(User.all, :id, :email, @mentorship_pairing.mentor_id), :class => "form-control") %>
       </div>
 
       <!-- Label and input for mentee_id -->
