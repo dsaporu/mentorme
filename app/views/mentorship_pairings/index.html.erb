@@ -16,8 +16,20 @@
 
       <% @mentorship_pairings.each do |mentorship_pairing| %>
       <tr>
-        <td><%= mentorship_pairing.mentor.email %></td>
-        <td><%= mentorship_pairing.user.email %></td>
+        <td>
+          <% if mentorship_pairing.mentor.present? %>
+            <a href="/users/<%= mentorship_pairing.mentor.id %>">
+              <%= mentorship_pairing.mentor.email %>
+            </a>
+          <% end %>
+        </td>
+        <td>
+          <% if mentorship_pairing.user.present? %>
+            <a href="/users/<%= mentorship_pairing.user.id %>">
+              <%= mentorship_pairing.user.email %>
+            </a>
+          <% end %>
+        </td>
         <td>
           <a href="/mentorship_pairings/<%= mentorship_pairing.id %>" class="btn btn-primary">Show</a>
           <a href="/mentorship_pairings/<%= mentorship_pairing.id %>/edit" class="btn btn-warning">Edit</a>

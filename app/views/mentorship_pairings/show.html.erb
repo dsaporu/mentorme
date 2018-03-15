@@ -6,10 +6,22 @@
   <div class="col-md-12 mb-2">
     <dl class="dl-horizontal">
       <dt>Mentor</dt>
-      <dd><%= @mentorship_pairing.mentor_id %></dd>
+      <dd>
+        <% if @mentorship_pairing.mentor.present? %>
+          <a href="/users/<%= @mentorship_pairing.mentor_id %>">
+            <%= @mentorship_pairing.mentor.email %>
+          </a>
+        <% end %>
+      </dd>
 
       <dt>Mentee</dt>
-      <dd><%= @mentorship_pairing.mentee_id %></dd>
+      <dd>
+        <% if @mentorship_pairing.user.present? %>
+          <a href="/users/<%= @mentorship_pairing.mentee_id %>">
+            <%= @mentorship_pairing.user.email %>
+          </a>
+        <% end %>
+      </dd>
 
     </dl>
 
