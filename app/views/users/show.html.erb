@@ -1,0 +1,55 @@
+<div class="page-header">
+  <h3>User #<%= @user.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12 mb-2">
+    <dl class="dl-horizontal">
+      <dt>Email</dt>
+      <dd><%= @user.email %></dd>
+
+      <dt>Password</dt>
+      <dd><%= @user.password %></dd>
+
+      <dt>Phone number</dt>
+      <dd><%= @user.phone_number %></dd>
+
+      <dt>Education level</dt>
+      <dd><%= @user.education_level %></dd>
+
+      <dt>Is mentor</dt>
+      <dd><%= @user.is_mentor %></dd>
+
+      <dt>Name</dt>
+      <dd><%= @user.name %></dd>
+
+      <dt>Undergrad degree</dt>
+      <dd><%= @user.undergrad_degree %></dd>
+
+      <dt>Undergrad school</dt>
+      <dd><%= @user.undergrad_school %></dd>
+
+      <dt>Mba program</dt>
+      <dd><%= @user.mba_program %></dd>
+
+      <dt>Concentration</dt>
+      <dd><%= @user.concentration %></dd>
+
+      <dt>Full time employer</dt>
+      <dd><%= @user.full_time_employer %></dd>
+
+      <dt>Mentee capacity</dt>
+      <dd><%= @user.mentee_capacity %></dd>
+
+      <dt>Available start date</dt>
+      <dd><%= @user.available_start_date %></dd>
+
+    </dl>
+
+    <div class="btn-group btn-group-justified">
+      <a href="/users" class="btn btn-primary">
+        Back
+      </a>
+    </div>
+  </div>
+</div>
