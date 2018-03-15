@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root :to => "mentorship_pairings#index"
   # Routes for the Mentorship_pairing resource:
   # CREATE
   get "/mentorship_pairings/new", :controller => "mentorship_pairings", :action => "new"
