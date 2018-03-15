@@ -1,6 +1,7 @@
 class MentorshipPairingsController < ApplicationController
   def index
-    @mentorship_pairings = MentorshipPairing.page(params[:page]).per(10)
+    @q = MentorshipPairing.ransack(params[:q])
+    @mentorship_pairings = @q.result(:distinct => true).includes(:user, :mentor).page(params[:page]).per(10)
 
     render("mentorship_pairings/index.html.erb")
   end
