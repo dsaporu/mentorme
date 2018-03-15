@@ -17,7 +17,7 @@
       <% @mentorship_pairings.each do |mentorship_pairing| %>
       <tr>
         <td><%= mentorship_pairing.mentor.email %></td>
-        <td><%= mentorship_pairing.mentee_id %></td>
+        <td><%= mentorship_pairing.user.email %></td>
         <td>
           <a href="/mentorship_pairings/<%= mentorship_pairing.id %>" class="btn btn-primary">Show</a>
           <a href="/mentorship_pairings/<%= mentorship_pairing.id %>/edit" class="btn btn-warning">Edit</a>
