@@ -1,6 +1,10 @@
 class User < ApplicationRecord
   # Direct associations
 
+  has_many   :mentorship_pairings,
+             :foreign_key => "mentor_id",
+             :dependent => :destroy
+
   has_one    :mentorship_pairing,
              :foreign_key => "mentee_id",
              :dependent => :destroy
