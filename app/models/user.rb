@@ -1,6 +1,10 @@
 class User < ApplicationRecord
   # Direct associations
 
+  has_one    :mentorship_pairing,
+             :foreign_key => "mentee_id",
+             :dependent => :destroy
+
   # Indirect associations
 
   # Validations
